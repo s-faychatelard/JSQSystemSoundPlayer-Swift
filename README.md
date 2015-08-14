@@ -1,6 +1,6 @@
 # JSQSystemSoundPlayer in Swift
 
-A fancy Swift wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.
+A fancy Swift wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS.
 
 This class is a light-weight, drop-in component to play sound effects, or other short sounds in your iOS app. 
 To determine your audio needs, see [Best Practices for iOS Audio](https://developer.apple.com/library/ios/DOCUMENTATION/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html#//apple_ref/doc/uid/TP40009767-CH2-SW10).
@@ -109,36 +109,18 @@ while (1) {
 JSQSystemSoundPlayer.sharedPlayer().playVibrateSound()
 ````
 
-## Documentation
-
-Read the fucking [docs][docsLink]. Generated with [appledoc](https://github.com/tomaz/appledoc). Hosted by [GitHub Pages](https://pages.github.com).
-
-More information on the [gh-pages](https://github.com/jessesquires/JSQSystemSoundPlayer/tree/gh-pages) branch.
-
-## Contribute
-
-Please follow these sweet [contribution guidelines](https://github.com/jessesquires/HowToContribute).
-
 ## Credits
 
-Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires)
-
-## Apps using this library
-
-* [Hemoglobe](http://bit.ly/hemoglobeapp)
-* [iPaint uPaint](http://bit.ly/ipupappstr)
-* [MUDRammer](https://itunes.apple.com/us/app/mudrammer-a-modern-mud-client/id597157072?mt=8)
-* *Your app here*
+Created and maintained by [**@Sylvain Fay-Châtelard**](https://twitter.com/proto0moi)
+from the awesome JSQSystemSoundPlayer project.
 
 ## License
 
-`JSQSystemSoundPlayer` is released under an [MIT License][mitLink]. See `LICENSE` for details.
+`JSQSystemSoundPlayer-Swift` is released under an [MIT License][mitLink]. See `LICENSE` for details.
 
 >**Copyright &copy; 2015 Jesse Squires, Sylvain FAY-CHATELARD.**
 
 *Please provide attribution, it is greatly appreciated.*
 
-[docsLink]:http://www.jessesquires.com/JSQSystemSoundPlayer
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLinkiOS]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-ios.png
-[imgLinkOSX]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-osx.png
