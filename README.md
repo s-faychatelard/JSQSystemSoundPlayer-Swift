@@ -1,6 +1,6 @@
 # JSQSystemSoundPlayer in Swift
 
-A fancy Swift wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS.
+A fancy Swift wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.
 
 This class is a light-weight, drop-in component to play sound effects, or other short sounds in your iOS app. 
 To determine your audio needs, see [Best Practices for iOS Audio](https://developer.apple.com/library/ios/DOCUMENTATION/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html#//apple_ref/doc/uid/TP40009767-CH2-SW10).
@@ -17,7 +17,7 @@ Or, read the tl;dr version:
 If this does not fit your needs, then this control is not for you! 
 See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html), instead.
 
-![screenshot ios][imgLinkiOS]
+![screenshot ios][imgLinkiOS] &nbsp;&nbsp;&nbsp; ![screenshot osx][imgLinkOSX]
 
 ## Features
 
@@ -28,6 +28,12 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 * Sweet and efficient memory management
 * Caches sounds (`SystemSoundID` instances) and purges on memory warning
 * Works with Swift! (v1.2)
+
+## Requirements
+
+* iOS 8.0+ 
+* OS X 10.9+
+* Swift 1.2
 
 ## Installation
 
@@ -96,7 +102,7 @@ JSQSystemSoundPlayer.sharedPlayer().bundle = NSBundle.mainBundle()
 
 #### Demo project
 
-The included example app, `JSQSystemSoundPlayerTest.xcodeproj`, exercises all functionality of this framework. There are applications for iOS. 
+The included example app, `JSQSystemSoundPlayerTest.xcodeproj`, exercises all functionality of this framework. There are applications for iOS ans OS X. 
 
 #### For a good time
 
@@ -112,7 +118,7 @@ JSQSystemSoundPlayer.sharedPlayer().playVibrateSound()
 ## Credits
 
 Created and maintained by [**@Sylvain Fay-Châtelard**](https://twitter.com/proto0moi)
-from the awesome JSQSystemSoundPlayer project.
+from the awesome [JSQSystemSoundPlayer](https://github.com/jessesquires/JSQSystemSoundPlayer) project.
 
 ## License
 
@@ -124,3 +130,4 @@ from the awesome JSQSystemSoundPlayer project.
 
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLinkiOS]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-ios.png
+[imgLinkOSX]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-osx.png
