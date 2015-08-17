@@ -15,9 +15,9 @@ import AudioToolbox
 
 public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
 
-public class JSQSystemSoundPlayer {
+@objc public class JSQSystemSoundPlayer: NSObject {
     
-    private static var UserDefaultsKey: String = "kJSQSystemSoundPlayerUserDefaultsKey"
+    static var UserDefaultsKey: String = "kJSQSystemSoundPlayerUserDefaultsKey"
     
     public static let TypeCAF: String = "caf"
     public static let TypeAIF: String = "aif"
@@ -27,13 +27,14 @@ public class JSQSystemSoundPlayer {
     public var bundle: NSBundle
     private(set) public var on: Bool = false
     
-    private var sounds: [String: NSData] = [:]
-    private var completionBlocks: [NSData: JSQSystemSoundPlayerCompletionBlock] = [:]
+    /* Those parameters are set to private for XCTest access */
+    internal var sounds: [String: NSData] = [:]
+    internal var completionBlocks: [NSData: JSQSystemSoundPlayerCompletionBlock] = [:]
     
     // MARK: - Init
     
     private static var _sharedPlayer: JSQSystemSoundPlayer?
-    public class func sharedPlayer() -> JSQSystemSoundPlayer {
+    @objc public class func sharedPlayer() -> JSQSystemSoundPlayer {
         
         if _sharedPlayer == nil {
             
@@ -43,10 +44,12 @@ public class JSQSystemSoundPlayer {
         return _sharedPlayer!
     }
     
-    init() {
+    override init() {
         
         self.bundle = NSBundle.mainBundle()
         self.on = true
+        
+        super.init()
         
         #if os(iOS)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("didReceiveMemoryWarningNotification:"), name: UIApplicationDidReceiveMemoryWarningNotification, object: nil)
@@ -124,7 +127,7 @@ public class JSQSystemSoundPlayer {
     
     // MARK: - Public API
     
-    public func toggleSoundPlayerOn(on: Bool) {
+    @objc public func toggleSoundPlayerOn(on: Bool) {
         
         self.on = on;
         
@@ -136,18 +139,18 @@ public class JSQSystemSoundPlayer {
         }
     }
     
-    public func playSound(filename: String, fileExtension: String, completion: JSQSystemSoundPlayerCompletionBlock?) {
+    @objc public func playSound(filename: String, fileExtension: String, completion: JSQSystemSoundPlayerCompletionBlock?) {
         
         self.playSound(filename, fileExtension: fileExtension, isAlert: false, completion: completion)
     }
     
-    public func playAlertSound(filename: String, fileExtension: String, completion: JSQSystemSoundPlayerCompletionBlock?) {
+    @objc public func playAlertSound(filename: String, fileExtension: String, completion: JSQSystemSoundPlayerCompletionBlock?) {
         
         self.playSound(filename, fileExtension: fileExtension, isAlert: true, completion: completion)
     }
     
 #if os(iOS)
-    public func playVibrateSound() {
+    @objc public func playVibrateSound() {
         
         if self.on {
         
@@ -156,12 +159,12 @@ public class JSQSystemSoundPlayer {
     }
 #endif
     
-    public func stopAllSounds() {
+    @objc public func stopAllSounds() {
     
         self.unloadSoundIDs()
     }
     
-    public func stopSound(filename: String) {
+    @objc public func stopSound(filename: String) {
         
         if let soundID = self.soundID(forFilename: filename) {
             
@@ -173,12 +176,14 @@ public class JSQSystemSoundPlayer {
         }
     }
     
-    public func preloadSound(filename: String, fileExtension: String) {
+    @objc public func preloadSound(filename: String, fileExtension: String) {
         
         if let _ = self.sounds[filename] {
             
-            self.addSoundIDForAudioFile(filename, fileExtension: fileExtension)
+            return
         }
+        
+        self.addSoundIDForAudioFile(filename, fileExtension: fileExtension)
     }
     
     // MARK: - Sound data
@@ -248,7 +253,7 @@ public class JSQSystemSoundPlayer {
                 let error: OSStatus = AudioServicesCreateSystemSoundID(fileURL, &soundID)
                 if Int(error) != kAudioServicesNoError {
                     
-                    //TODO: [self logError:error withMessage:@"Warning! SystemSoundID could not be created."];
+                    self.logError(error, withMessage: "Warning! SystemSoundID could not be created.")
                     return nil;
                 }
                 
@@ -311,7 +316,7 @@ public class JSQSystemSoundPlayer {
     
     // MARK: - Notifications
     
-    private func didReceiveMemoryWarningNotification(notification: NSNotification) {
+    func didReceiveMemoryWarningNotification(notification: NSNotification) {
         
         self.unloadSoundIDs()
     }
