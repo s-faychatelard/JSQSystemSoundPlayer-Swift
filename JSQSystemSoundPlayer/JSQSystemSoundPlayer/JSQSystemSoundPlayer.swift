@@ -33,16 +33,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
     
     // MARK: - Init
     
-    private static var _sharedPlayer: JSQSystemSoundPlayer?
-    @objc public class func sharedPlayer() -> JSQSystemSoundPlayer {
-        
-        if _sharedPlayer == nil {
-            
-            _sharedPlayer = JSQSystemSoundPlayer()
-        }
-        
-        return _sharedPlayer!
-    }
+    public static let sharedPlayer: JSQSystemSoundPlayer = JSQSystemSoundPlayer()
     
     override init() {
         
@@ -83,7 +74,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
                 let sharedSoundHelper = SystemSoundHelper.sharedInstance()
                 sharedSoundHelper.completion = { (soundID) in
                     
-                    let player = JSQSystemSoundPlayer.sharedPlayer()
+                    let player = JSQSystemSoundPlayer.sharedPlayer
                     if let block = player.completionBlockForSoundID(soundID) {
                         
                         block()
@@ -275,8 +266,8 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
             self.unloadSoundID(filename)
         }
         
-        self.sounds.removeAll(keepCapacity: false)
-        self.completionBlocks.removeAll(keepCapacity: false)
+        self.sounds.removeAll()
+        self.completionBlocks.removeAll()
     }
     
     func unloadSoundID(filename: String) {

@@ -15,13 +15,13 @@ class JSQSystemSoundPlayer_Tests: XCTestCase {
     let soundFunk = "Funk"
     let soundBalladPiano = "BalladPiano"
     
-    var sharedPlayer: JSQSystemSoundPlayer! = JSQSystemSoundPlayer.sharedPlayer()
+    var sharedPlayer: JSQSystemSoundPlayer! = JSQSystemSoundPlayer.sharedPlayer
     
     override func setUp() {
         super.setUp()
         
-        self.sharedPlayer = JSQSystemSoundPlayer.sharedPlayer()
-        self.sharedPlayer.bundle = NSBundle(forClass: self.dynamicType)
+        self.sharedPlayer = JSQSystemSoundPlayer.sharedPlayer
+        self.sharedPlayer.bundle = NSBundle(forClass: JSQSystemSoundPlayer.self)
         self.sharedPlayer.toggleSoundPlayerOn(true)
     }
     
@@ -36,7 +36,7 @@ class JSQSystemSoundPlayer_Tests: XCTestCase {
         
         XCTAssertNotNil(self.sharedPlayer, "Player should not be nil")
         
-        let anotherPlayer = JSQSystemSoundPlayer.sharedPlayer()
+        let anotherPlayer = JSQSystemSoundPlayer.sharedPlayer
         XCTAssertEqual(self.sharedPlayer, anotherPlayer, "Players returned from shared instance should be equal")
         
         XCTAssertTrue(self.sharedPlayer.sounds.count == 0, "Sounds dictionary count should be 0")
