@@ -13,19 +13,19 @@ import AudioToolbox
     import UIKit
 #endif
 
-public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
+typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
 
-@objc public class JSQSystemSoundPlayer: NSObject {
+@objc class JSQSystemSoundPlayer: NSObject {
     
     static var UserDefaultsKey: String = "kJSQSystemSoundPlayerUserDefaultsKey"
     
-    public static let TypeCAF: String = "caf"
-    public static let TypeAIF: String = "aif"
-    public static let TypeAIFF: String = "aiff"
-    public static let TypeWAV: String = "wav"
+    static let TypeCAF: String = "caf"
+    static let TypeAIF: String = "aif"
+    static let TypeAIFF: String = "aiff"
+    static let TypeWAV: String = "wav"
     
-    public var bundle: NSBundle
-    private(set) public var on: Bool = false
+    var bundle: NSBundle
+    private(set) var on: Bool = false
     
     /* Those parameters are set to private for XCTest access */
     internal var sounds: [String: NSData] = [:]
@@ -33,7 +33,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
     
     // MARK: - Init
     
-    public static let sharedPlayer: JSQSystemSoundPlayer = JSQSystemSoundPlayer()
+    static let sharedPlayer: JSQSystemSoundPlayer = JSQSystemSoundPlayer()
     
     override init() {
         
@@ -116,9 +116,9 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
         return true
     }
     
-    // MARK: - Public API
+    // MARK: - API
     
-    @objc public func toggleSoundPlayerOn(on: Bool) {
+    @objc func toggleSoundPlayerOn(on: Bool) {
         
         self.on = on;
         
@@ -130,18 +130,18 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
         }
     }
     
-    @objc public func playSound(filename: String, fileExtension: String, completion: JSQSystemSoundPlayerCompletionBlock?) {
+    @objc func playSound(filename: String, fileExtension: String, completion: JSQSystemSoundPlayerCompletionBlock?) {
         
         self.playSound(filename, fileExtension: fileExtension, isAlert: false, completion: completion)
     }
     
-    @objc public func playAlertSound(filename: String, fileExtension: String, completion: JSQSystemSoundPlayerCompletionBlock?) {
+    @objc func playAlertSound(filename: String, fileExtension: String, completion: JSQSystemSoundPlayerCompletionBlock?) {
         
         self.playSound(filename, fileExtension: fileExtension, isAlert: true, completion: completion)
     }
     
 #if os(iOS)
-    @objc public func playVibrateSound() {
+    @objc func playVibrateSound() {
         
         if self.on {
         
@@ -150,12 +150,12 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
     }
 #endif
     
-    @objc public func stopAllSounds() {
+    @objc func stopAllSounds() {
     
         self.unloadSoundIDs()
     }
     
-    @objc public func stopSound(filename: String) {
+    @objc func stopSound(filename: String) {
         
         if let soundID = self.soundID(forFilename: filename) {
             
@@ -167,7 +167,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
         }
     }
     
-    @objc public func preloadSound(filename: String, fileExtension: String) {
+    @objc func preloadSound(filename: String, fileExtension: String) {
         
         if let _ = self.sounds[filename] {
             
