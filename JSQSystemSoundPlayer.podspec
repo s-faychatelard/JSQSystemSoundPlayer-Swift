@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-   s.name = 'JSQSystemSoundPlayer'
+   s.name = 'JSQSystemSoundPlayer-Swift'
    s.version = '1.0'
    s.license = 'MIT'
 
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
    s.source = { :git => 'https://github.com/s-faychatelard/JSQSystemSoundPlayer-Swift.git', :tag => s.version }
    s.source_files = 'JSQSystemSoundPlayer/JSQSystemSoundPlayer/*.{h,m,swift}'
 
-   s.ios.deployment_target = '8.1'
+   s.ios.deployment_target = '8.0'
    s.ios.frameworks = 'AudioToolbox', 'Foundation', 'UIKit'
 
    s.osx.deployment_target = '10.7'
