@@ -70,20 +70,17 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
         if let soundID: SystemSoundID = self.soundID(forFilename: filename) {
             
             if let completion = completion {
-                
-                let sharedSoundHelper = SystemSoundHelper.sharedInstance()
-                sharedSoundHelper.completion = { (soundID) in
-                    
+
+                let error: OSStatus = AudioServicesAddSystemSoundCompletion(soundID, nil, nil, { (soundID, userData) -> Void in
                     let player = JSQSystemSoundPlayer.sharedPlayer
                     if let block = player.completionBlockForSoundID(soundID) {
-                        
+
                         block()
                         player.removeCompletionBlockForSoundID(soundID)
                     }
-                }
-                let error: OSStatus = AudioServicesAddSystemSoundCompletion(soundID, nil, nil, sharedSoundHelper.completionHandler(), nil)
+                }, nil)
                     
-                if Int(error) != kAudioServicesNoError {
+                if error != kAudioServicesNoError {
                     
                     self.logError(error, withMessage: "Warning! Completion block could not be added to SystemSoundID.")
                 }
@@ -179,7 +176,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
     
     // MARK: - Sound data
     
-    func data(var # soundID: SystemSoundID) -> NSData {
+    func data(var soundID  soundID: SystemSoundID) -> NSData {
         
         return NSData(bytes: &soundID, length: sizeof(SystemSoundID))
     }
@@ -242,7 +239,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
                 
                 var soundID: SystemSoundID = 0
                 let error: OSStatus = AudioServicesCreateSystemSoundID(fileURL, &soundID)
-                if Int(error) != kAudioServicesNoError {
+                if error != kAudioServicesNoError {
                     
                     self.logError(error, withMessage: "Warning! SystemSoundID could not be created.")
                     return nil;
@@ -251,11 +248,11 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
                 return soundID
             }
             
-            println("[\(self)] Error: audio file not found at URL: \(fileURL)")
+            print("[\(self)] Error: audio file not found at URL: \(fileURL)")
             return nil
         }
         
-        println("[\(self)] Error: audio file not found: \(filename)")
+        print("[\(self)] Error: audio file not found: \(filename)")
         return nil
     }
     
@@ -277,7 +274,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
             AudioServicesRemoveSystemSoundCompletion(soundID)
             
             let error: OSStatus = AudioServicesDisposeSystemSoundID(soundID)
-            if Int(error) != kAudioServicesNoError {
+            if error != kAudioServicesNoError {
                 
                 self.logError(error, withMessage: "Warning! SystemSoundID could not be disposed.")
             }
@@ -287,7 +284,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
     func logError(error: OSStatus, withMessage message: String) {
         
         var errorMessage: String?
-        switch Int(error) {
+        switch error {
         case kAudioServicesUnsupportedPropertyError:
             errorMessage = "The property is not supported."
         case kAudioServicesBadPropertySizeError:
@@ -302,7 +299,7 @@ public typealias JSQSystemSoundPlayerCompletionBlock = (() -> Void)
             errorMessage = "Unkown error"
         }
         
-        println("[\(self)] \(message) Error: (code \(Int(error))) \(errorMessage)")
+        print("[\(self)] \(message) Error: (code \(error)) \(errorMessage)")
     }
     
     // MARK: - Notifications

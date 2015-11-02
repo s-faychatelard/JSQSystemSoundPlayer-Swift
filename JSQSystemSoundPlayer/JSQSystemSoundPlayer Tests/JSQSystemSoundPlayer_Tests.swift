@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+import AudioToolbox
 
 class JSQSystemSoundPlayer_Tests: XCTestCase {
     
@@ -76,7 +77,7 @@ class JSQSystemSoundPlayer_Tests: XCTestCase {
         
         let completion: JSQSystemSoundPlayerCompletionBlock = {
 
-            println("Completion block")
+            print("Completion block")
         }
         
         self.sharedPlayer.addCompletionBlock(completion, toSoundID: soundID)
@@ -182,7 +183,7 @@ class JSQSystemSoundPlayer_Tests: XCTestCase {
 
         self.sharedPlayer.playSound(self.soundBasso, fileExtension: JSQSystemSoundPlayer.TypeAIF) { () -> Void in
             
-            println("Completion block")
+            print("Completion block")
         }
         
         XCTAssertTrue(self.sharedPlayer.completionBlocks.count == 1, "Completion blocks dictionary should contain 1 object")

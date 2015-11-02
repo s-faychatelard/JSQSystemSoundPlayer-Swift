@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61377EE51B81B94F00CD490D /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5D2841B7E2B9400557A4F /* JSQSystemSoundPlayer.framework */; };
-		61377EE61B81B94F00CD490D /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5D2841B7E2B9400557A4F /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61377F561B81D7E300CD490D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61377F551B81D7E300CD490D /* AppDelegate.swift */; };
 		61377F581B81D7E300CD490D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61377F571B81D7E300CD490D /* Images.xcassets */; };
 		61377F5B1B81D7E400CD490D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61377F591B81D7E400CD490D /* MainMenu.xib */; };
@@ -18,34 +16,88 @@
 		61377F751B81D81700CD490D /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 61377F6F1B81D80F00CD490D /* BalladPiano.caf */; };
 		61377F761B81D81B00CD490D /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 61377F701B81D80F00CD490D /* Basso.aif */; };
 		61377F771B81D81B00CD490D /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 61377F711B81D80F00CD490D /* Funk.aiff */; };
-		61377F9D1B81DB3700CD490D /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61377F9C1B81DB3700CD490D /* JSQSystemSoundPlayer.framework */; };
-		61377F9F1B81DB4300CD490D /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61377F9C1B81DB3700CD490D /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61E5D2651B7E2B5A00557A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5D2641B7E2B5A00557A4F /* AppDelegate.swift */; };
 		61E5D2671B7E2B5A00557A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5D2661B7E2B5A00557A4F /* ViewController.swift */; };
 		61E5D26A1B7E2B5A00557A4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E5D2681B7E2B5A00557A4F /* Main.storyboard */; };
 		61E5D26C1B7E2B5A00557A4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E5D26B1B7E2B5A00557A4F /* Images.xcassets */; };
 		61E5D26F1B7E2B5A00557A4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E5D26D1B7E2B5A00557A4F /* LaunchScreen.xib */; };
+		E4C9ED941BE74E29003ECE5C /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C9ED871BE74DFC003ECE5C /* JSQSystemSoundPlayer.framework */; };
+		E4C9ED951BE74E29003ECE5C /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4C9ED871BE74DFC003ECE5C /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4C9ED9A1BE74E36003ECE5C /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C9ED851BE74DFC003ECE5C /* JSQSystemSoundPlayer.framework */; };
+		E4C9ED9B1BE74E36003ECE5C /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4C9ED851BE74DFC003ECE5C /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		61377EE71B81B94F00CD490D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				61377EE61B81B94F00CD490D /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		E4C9ED841BE74DFC003ECE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4287FC21B7CC5DE003E1072;
+			remoteInfo = "JSQSystemSoundPlayer-iOS";
 		};
+		E4C9ED861BE74DFC003ECE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 61377F7D1B81D93A00CD490D;
+			remoteInfo = "JSQSystemSoundPlayer-OSX";
+		};
+		E4C9ED881BE74DFC003ECE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 61377F201B81C69300CD490D;
+			remoteInfo = "JSQSystemSoundPlayer Tests";
+		};
+		E4C9ED921BE74E1C003ECE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 61377F7C1B81D93A00CD490D;
+			remoteInfo = "JSQSystemSoundPlayer-OSX";
+		};
+		E4C9ED961BE74E29003ECE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 61377F7C1B81D93A00CD490D;
+			remoteInfo = "JSQSystemSoundPlayer-OSX";
+		};
+		E4C9ED981BE74E32003ECE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4287FC11B7CC5DE003E1072;
+			remoteInfo = "JSQSystemSoundPlayer-iOS";
+		};
+		E4C9ED9C1BE74E36003ECE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4287FC11B7CC5DE003E1072;
+			remoteInfo = "JSQSystemSoundPlayer-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
 		61377FA01B81DB4300CD490D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				61377F9F1B81DB4300CD490D /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
+				E4C9ED951BE74E29003ECE5C /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C9ED9E1BE74E36003ECE5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E4C9ED9B1BE74E36003ECE5C /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,15 +113,14 @@
 		61377F6F1B81D80F00CD490D /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
 		61377F701B81D80F00CD490D /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
 		61377F711B81D80F00CD490D /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
-		61377F9C1B81DB3700CD490D /* JSQSystemSoundPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQSystemSoundPlayer.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JSQSystemSoundPlayer-agqetffjvnfpfgcquzlvgjjfjkmw/Build/Products/Debug/JSQSystemSoundPlayer.framework"; sourceTree = "<group>"; };
-		61E5D25F1B7E2B5A00557A4F /* JSQSystemSoundPlayerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSQSystemSoundPlayerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E5D25F1B7E2B5A00557A4F /* JSQSystemSoundPlayerTest-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSQSystemSoundPlayerTest-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E5D2631B7E2B5A00557A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E5D2641B7E2B5A00557A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61E5D2661B7E2B5A00557A4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61E5D2691B7E2B5A00557A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61E5D26B1B7E2B5A00557A4F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		61E5D26E1B7E2B5A00557A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		61E5D2841B7E2B9400557A4F /* JSQSystemSoundPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQSystemSoundPlayer.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JSQSystemSoundPlayer-agqetffjvnfpfgcquzlvgjjfjkmw/Build/Products/Debug-iphonesimulator/JSQSystemSoundPlayer.framework"; sourceTree = "<group>"; };
+		E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSQSystemSoundPlayer.xcodeproj; path = ../JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61377F9D1B81DB3700CD490D /* JSQSystemSoundPlayer.framework in Frameworks */,
+				E4C9ED941BE74E29003ECE5C /* JSQSystemSoundPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61377EE51B81B94F00CD490D /* JSQSystemSoundPlayer.framework in Frameworks */,
+				E4C9ED9A1BE74E36003ECE5C /* JSQSystemSoundPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +149,6 @@
 				61377F551B81D7E300CD490D /* AppDelegate.swift */,
 				61377F571B81D7E300CD490D /* Images.xcassets */,
 				61377F591B81D7E400CD490D /* MainMenu.xib */,
-				61377F9C1B81DB3700CD490D /* JSQSystemSoundPlayer.framework */,
 				61377F531B81D7E300CD490D /* Supporting Files */,
 			);
 			path = "JSQSystemSoundPlayerTest-OSX";
@@ -125,6 +175,7 @@
 		61E5D2561B7E2B5A00557A4F = {
 			isa = PBXGroup;
 			children = (
+				E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */,
 				61377F6E1B81D80F00CD490D /* Sample sounds */,
 				61E5D2611B7E2B5A00557A4F /* JSQSystemSoundPlayerTest */,
 				61377F521B81D7E300CD490D /* JSQSystemSoundPlayerTest-OSX */,
@@ -135,7 +186,7 @@
 		61E5D2601B7E2B5A00557A4F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61E5D25F1B7E2B5A00557A4F /* JSQSystemSoundPlayerTest.app */,
+				61E5D25F1B7E2B5A00557A4F /* JSQSystemSoundPlayerTest-iOS.app */,
 				61377F511B81D7E300CD490D /* JSQSystemSoundPlayerTest-OSX.app */,
 			);
 			name = Products;
@@ -149,7 +200,6 @@
 				61E5D2661B7E2B5A00557A4F /* ViewController.swift */,
 				61E5D2681B7E2B5A00557A4F /* Main.storyboard */,
 				61E5D26D1B7E2B5A00557A4F /* LaunchScreen.xib */,
-				61E5D2841B7E2B9400557A4F /* JSQSystemSoundPlayer.framework */,
 				61E5D2621B7E2B5A00557A4F /* Supporting Files */,
 			);
 			path = JSQSystemSoundPlayerTest;
@@ -161,6 +211,16 @@
 				61E5D2631B7E2B5A00557A4F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4C9ED7F1BE74DFC003ECE5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4C9ED851BE74DFC003ECE5C /* JSQSystemSoundPlayer.framework */,
+				E4C9ED871BE74DFC003ECE5C /* JSQSystemSoundPlayer.framework */,
+				E4C9ED891BE74DFC003ECE5C /* JSQSystemSoundPlayer Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +238,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				E4C9ED931BE74E1C003ECE5C /* PBXTargetDependency */,
+				E4C9ED971BE74E29003ECE5C /* PBXTargetDependency */,
 			);
 			name = "JSQSystemSoundPlayerTest-OSX";
 			productName = "JSQSystemSoundPlayerTest-OSX";
@@ -191,15 +253,17 @@
 				61E5D25B1B7E2B5A00557A4F /* Sources */,
 				61E5D25C1B7E2B5A00557A4F /* Frameworks */,
 				61E5D25D1B7E2B5A00557A4F /* Resources */,
-				61377EE71B81B94F00CD490D /* Embed Frameworks */,
+				E4C9ED9E1BE74E36003ECE5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E4C9ED991BE74E32003ECE5C /* PBXTargetDependency */,
+				E4C9ED9D1BE74E36003ECE5C /* PBXTargetDependency */,
 			);
 			name = "JSQSystemSoundPlayerTest-iOS";
 			productName = JSQSystemSoundPlayerTest;
-			productReference = 61E5D25F1B7E2B5A00557A4F /* JSQSystemSoundPlayerTest.app */;
+			productReference = 61E5D25F1B7E2B5A00557A4F /* JSQSystemSoundPlayerTest-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +272,9 @@
 		61E5D2571B7E2B5A00557A4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Dviance;
 				TargetAttributes = {
 					61377F501B81D7E300CD490D = {
@@ -230,6 +296,12 @@
 			mainGroup = 61E5D2561B7E2B5A00557A4F;
 			productRefGroup = 61E5D2601B7E2B5A00557A4F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4C9ED7F1BE74DFC003ECE5C /* Products */;
+					ProjectRef = E4C9ED7E1BE74DFC003ECE5C /* JSQSystemSoundPlayer.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				61E5D25E1B7E2B5A00557A4F /* JSQSystemSoundPlayerTest-iOS */,
@@ -237,6 +309,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4C9ED851BE74DFC003ECE5C /* JSQSystemSoundPlayer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSQSystemSoundPlayer.framework;
+			remoteRef = E4C9ED841BE74DFC003ECE5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4C9ED871BE74DFC003ECE5C /* JSQSystemSoundPlayer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSQSystemSoundPlayer.framework;
+			remoteRef = E4C9ED861BE74DFC003ECE5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E4C9ED891BE74DFC003ECE5C /* JSQSystemSoundPlayer Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "JSQSystemSoundPlayer Tests.xctest";
+			remoteRef = E4C9ED881BE74DFC003ECE5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		61377F4F1B81D7E300CD490D /* Resources */ = {
@@ -286,6 +382,29 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E4C9ED931BE74E1C003ECE5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JSQSystemSoundPlayer-OSX";
+			targetProxy = E4C9ED921BE74E1C003ECE5C /* PBXContainerItemProxy */;
+		};
+		E4C9ED971BE74E29003ECE5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JSQSystemSoundPlayer-OSX";
+			targetProxy = E4C9ED961BE74E29003ECE5C /* PBXContainerItemProxy */;
+		};
+		E4C9ED991BE74E32003ECE5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JSQSystemSoundPlayer-iOS";
+			targetProxy = E4C9ED981BE74E32003ECE5C /* PBXContainerItemProxy */;
+		};
+		E4C9ED9D1BE74E36003ECE5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JSQSystemSoundPlayer-iOS";
+			targetProxy = E4C9ED9C1BE74E36003ECE5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		61377F591B81D7E400CD490D /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
@@ -321,10 +440,8 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/JSQSystemSoundPlayer-agqetffjvnfpfgcquzlvgjjfjkmw/Build/Products/Debug",
-				);
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -332,6 +449,7 @@
 				INFOPLIST_FILE = "JSQSystemSoundPlayerTest-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.dviance.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -343,13 +461,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/JSQSystemSoundPlayer-agqetffjvnfpfgcquzlvgjjfjkmw/Build/Products/Debug",
-				);
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "JSQSystemSoundPlayerTest-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.dviance.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -376,6 +493,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -442,12 +560,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/JSQSystemSoundPlayer-agqetffjvnfpfgcquzlvgjjfjkmw/Build/Products/Debug-iphonesimulator",
-				);
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = JSQSystemSoundPlayerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.dviance.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -456,12 +573,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/JSQSystemSoundPlayer-agqetffjvnfpfgcquzlvgjjfjkmw/Build/Products/Debug-iphonesimulator",
-				);
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = JSQSystemSoundPlayerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.dviance.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -476,6 +592,7 @@
 				61377F6A1B81D7E400CD490D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61E5D25A1B7E2B5A00557A4F /* Build configuration list for PBXProject "JSQSystemSoundPlayerTest" */ = {
 			isa = XCConfigurationList;

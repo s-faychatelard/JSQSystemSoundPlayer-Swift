@@ -14,43 +14,43 @@ class ViewController: UIViewController {
     @IBOutlet var soundSwitch: UISwitch!
     
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
         
-        self.soundSwitch.on = JSQSystemSoundPlayer.sharedPlayer().on
+        self.soundSwitch.on = JSQSystemSoundPlayer.sharedPlayer.on
     }
 
     @IBAction func playSystemSoundPressed(sender: UIButton) {
         
-        JSQSystemSoundPlayer.sharedPlayer().playSound("Basso", fileExtension: JSQSystemSoundPlayer.TypeAIF) { () -> Void in
+        JSQSystemSoundPlayer.sharedPlayer.playSound("Basso", fileExtension: JSQSystemSoundPlayer.TypeAIF) { () -> Void in
             
-            println("Sound finished playing. Executing completion block...")
+            print("Sound finished playing. Executing completion block...")
         }
     }
     
     @IBAction func playAlertSoundPressed(sender: UIButton) {
         
-        JSQSystemSoundPlayer.sharedPlayer().playAlertSound("Funk", fileExtension: JSQSystemSoundPlayer.TypeAIFF, completion: nil)
+        JSQSystemSoundPlayer.sharedPlayer.playAlertSound("Funk", fileExtension: JSQSystemSoundPlayer.TypeAIFF, completion: nil)
         
     }
     
     @IBAction func playVibratePressed(sender: UIButton) {
         
-        JSQSystemSoundPlayer.sharedPlayer().playVibrateSound()
+        JSQSystemSoundPlayer.sharedPlayer.playVibrateSound()
     }
     
     @IBAction func playLongSoundPressed(sender: UIButton) {
         
-        println("Playing long sound...")
-        JSQSystemSoundPlayer.sharedPlayer().playSound("BalladPiano", fileExtension: JSQSystemSoundPlayer.TypeCAF) { () -> Void in
+        print("Playing long sound...")
+        JSQSystemSoundPlayer.sharedPlayer.playSound("BalladPiano", fileExtension: JSQSystemSoundPlayer.TypeCAF) { () -> Void in
             
-            println("Long sound complete!")
+            print("Long sound complete!")
         }
     }
     
     @IBAction func stopPressed(sender: UIButton) {
         
-        JSQSystemSoundPlayer.sharedPlayer().stopAllSounds()
+        JSQSystemSoundPlayer.sharedPlayer.stopAllSounds()
 
         // Stop playing specific sound
         // JSQSystemSoundPlayer.sharedPlayer().stopSound("BalladPiano")
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     
     @IBAction func toggleSwitch(sender: UISwitch) {
         
-        JSQSystemSoundPlayer.sharedPlayer().toggleSoundPlayerOn(sender.on)
+        JSQSystemSoundPlayer.sharedPlayer.toggleSoundPlayerOn(sender.on)
     }
 }
 
